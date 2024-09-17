@@ -1,5 +1,7 @@
 import React from "react";
 import { Button } from "./ui/button";
+import Image from "next/image";
+import Logo from "../public/logo1.png";
 
 const NavBar = () => {
   return (
@@ -9,14 +11,14 @@ const NavBar = () => {
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
               {/* Logo and title */}
-              <img src="/path-to-your-logo.png" alt="Election Info" className="block h-8 w-auto" />
+              <Image src={Logo} alt="Election Info" className="block h-8 w-auto" /> 
             </div>
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
                 {/* Navigation Links */}
                 <a href="/" className="text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                <a href="/win-predictor" className="text-white px-3 py-2 rounded-md text-sm font-medium">Win Predictor</a>
-                <a href="/manifesto" className="text-white px-3 py-2 rounded-md text-sm font-medium">Manifesto</a>
+                <a href="/#winprediction" className="text-white px-3 py-2 rounded-md text-sm font-medium">Win Predictor</a>
+                <a href="/#Manifestos" className="text-white px-3 py-2 rounded-md text-sm font-medium">Manifesto</a>
               </div>
             </div>
           </div>

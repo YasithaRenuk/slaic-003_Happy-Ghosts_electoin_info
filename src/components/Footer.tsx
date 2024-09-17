@@ -1,4 +1,7 @@
+import Image from "next/image";
 import React from "react";
+import Logo from "../public/logo1.png";
+
 
 const Footer = () => {
   return (
@@ -6,7 +9,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto text-center">
         {/* Logo and title */}
         <div className="flex flex-col items-center">
-          <img src="/path-to-your-logo.png" alt="Election Info" className="block h-12 w-auto mb-2" />
+          <Image src={Logo} alt="Election Info" className="block h-12 w-auto mb-2"/>
           <p className="font-bold text-lg">Submission for AI Driven Hackathon</p>
         </div>
 
