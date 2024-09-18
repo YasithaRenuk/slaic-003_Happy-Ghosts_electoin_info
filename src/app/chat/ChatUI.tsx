@@ -13,15 +13,14 @@ import { Skeleton } from "@/components/ui/skeleton";
 // Extracted CSS styles for cleaner JSX
 const containerStyle = {
   background: "linear-gradient(to bottom, #2b0000, #000000)",
-  minHeight: "100vh",
+  minHeight: "88vh",
   display: "flex",
   justifyContent: "center",
-  alignItems: "center",
+  alignItems: "flex-start",
 };
 
 const chatBoxStyle = {
   width: "100%",
-  maxWidth: "850px",
   borderRadius: "2rem",
   overflow: "hidden",
 };
@@ -45,9 +44,9 @@ const sendButtonStyle = {
 };
 
 const scrollAreaStyle: React.CSSProperties = {
-  maxHeight: "600px",
+  maxHeight: "650px",
   overflowY: "scroll",
-  paddingBottom: "1rem",
+  paddingBottom: "100px",
 };
 
 // Memoized ChatBubble to prevent re-renders if the message prop doesn't change
@@ -137,18 +136,16 @@ const ChatUi = () => {
               )}
             </div>
           ))}
-
           {/* Show loading skeleton when waiting for response */}
           {loading && (
-            <div className="flex w-full">
-              <div className="w-full h-12 rounded-lg my-2 bg-gray-300">
-                <Skeleton className="h-[125px] w-[250px] rounded-xl" />
-                <div className="space-y-2">
-                  <Skeleton className="h-4 w-[250px]" />
-                  <Skeleton className="h-4 w-[200px]" />
-                </div>
-              </div>
-            </div>
+            <div className="flex items-center space-x-4">
+      <Skeleton className="h-12 w-12 rounded-full bg-white" />
+      <div className="space-y-2">
+      <Skeleton className="h-[125px] w-[250px] rounded-xl bg-white" />
+        <Skeleton className="h-4 w-[250px] bg-white" />
+        <Skeleton className="h-4 w-[200px] bg-white" />
+      </div>
+    </div>
           )}
         </div>
         <div className="fixed bottom-0 left-0 right-0 flex justify-center p-3">
