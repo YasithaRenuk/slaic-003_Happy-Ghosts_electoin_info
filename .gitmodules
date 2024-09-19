@@ -1,3 +1,7 @@
 [submodule "election_info_backend"]
 	path = election_info_backend
 	url = ./election_info_backend
+	
+[submodule "slaic-003_Happy-Ghosts_electoin_info_backend"]
+	path = slaic-003_Happy-Ghosts_electoin_info_backend
+	url = ./slaic-003_Happy-Ghosts_electoin_info_backend
