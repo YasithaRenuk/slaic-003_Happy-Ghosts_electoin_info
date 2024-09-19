@@ -1,0 +1,3 @@
+[submodule "election_info_backend"]
+	path = election_info_backend
+	url = ./election_info_backend
